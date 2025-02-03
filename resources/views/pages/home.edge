@@ -8,17 +8,19 @@
       AdonisJS - A Fully featured web framework for Node.js
     </title>
 
-    @vite(['resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
   </head>
-  <body>
-    <nav>
-      <a href="{{ route('home') }}">Home</a>
-      <a href="{{ route('movies.show', { slug: 'my-awesome-movie' }) }}">
-        My Awesome Movie
+  <body class="flex items-center justify-center min-h-screen">
+    <div class="max-w-3xl mx-auto mt-6">
+      <nav>
+        <a href="{{ route('home') }}">Home</a>
+        <a href="{{ route('movies.show', { slug: 'my-awesome-movie' }) }}">
+          My Awesome Movie
       </a>
-    </nav>
-    <h1>
-      Welcome Home
-    </h1>
+      </nav>
+      <h1 class="text-red-500">
+        Welcome Home
+      </h1>
+    </div>
   </body>
 </html>
